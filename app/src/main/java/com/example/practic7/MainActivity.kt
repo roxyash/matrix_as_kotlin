@@ -1,9 +1,12 @@
 package com.example.practic7
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.pm.ActivityInfo
+import android.content.res.Configuration
 import android.os.Bundle
 import android.widget.EditText
+import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -11,6 +14,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
 
 
         button.setOnClickListener{
@@ -25,7 +29,6 @@ class MainActivity : AppCompatActivity() {
             val number9 = findViewById<EditText>(R.id.editText9).text.toString()!!.toInt()
 
             val determinant = number1 * ((number5*number9)+((number6*number8)*-1)) - number7*((number4*number9)+((number7*number6)*-1)) + number3*((number4*number8)+((number7*number5)*-1))
-            //text1.text = determinant.toString()
             val minor1 = (number5*number9)-(number8*number6)
             val minor2 = ((number4*number9)-(number7*number6))*-1
             val minor3 = (number4*number8)-(number7*number5)
